@@ -9,7 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "koa": "^2.7.0"
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.16.4",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "superstruct": "^0.6.0"
   }
 }
