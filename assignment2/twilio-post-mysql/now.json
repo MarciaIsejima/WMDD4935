@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "twilio-post-mysql",
+  "env": {
+    "DBHOST": "@dbhost",
+    "DBPORT": "@dbport",
+    "DBUSER": "@dbuser",
+    "DBPASSWORD": "@dbpassword",
+    "DBNAME": "todo"
+  },
+  "builds": [
+    { "src": "index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
+}
