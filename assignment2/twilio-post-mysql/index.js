@@ -10,11 +10,11 @@ app.use(pino)
 
 app.use(async ctx => {
 
-	ctx.log.info('inserting todo item into database')
-  const dbtitle = await ctx.request.body.Body
-  const item = await show(dbtitle)
+	ctx.log.info('inserting todo item into database');
+	const dbtitle = await ctx.request.body.Body;
+	const item = await show(dbtitle);
 
-  ctx.log.info('generating SMS response message')
+  ctx.log.info('generating SMS response message');
 	const twiml = new MessagingResponse();
   twiml.message("Todo item inserted successfully!");
   ctx.res.writeHead(200, { 'Content-Type': 'text/xml' });
@@ -25,13 +25,13 @@ async function show(title) {
   try {
     
     const itemData = await pool.query(`INSERT todoItems (todoItem, dateCreated) VALUES ('${title}', NOW());`)
-    return itemData
+    return itemData;
 
   } catch (error) {
-    return error
+    return error;
   }
 }
 
-module.exports = app.callback()
+module.exports = app.callback();
 // app.listen(3000);
 // console.log("Listening on port 3000..."); 
