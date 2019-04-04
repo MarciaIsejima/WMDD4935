@@ -1,30 +1,19 @@
 # WMDD4935 - Assignment 2
-## Texting to-do items to a database
+## Texting to-do items into a database
 
-![High Level Architecture](./twilio.png)
+![High Level Architecture](./Twilio.png)
 
-### Endpoint: 
-`https://mysql-get-todo.marciaisejima.now.sh`
+### Twilio phone number to text to: 
+`(778) 644-0737`
+
+### Node Application Endpoint: 
+`https://twilio-post-mysql.marciaisejima.now.sh`
 
 ### Instructions:
-#### To retrieve complete list of to-do items:
-`https://mysql-get-todo.marciaisejima.now.sh`
-
-#### To search for a particular to-do item, add a query expression to the end of the endpoint. E.g. to search for to-do's that contain the word "butter", add the search key 'title' with the desired word:
-`https://mysql-get-todo.marciaisejima.now.sh?title=butter`
-
-returned message:
+#### To insert to do items:
+Text the to-do item to the Twilio number provided.
+If successful, you will receive a message as follows: 
 
 ```
-[
-    {
-        "todoItem": "Buy butter"
-    }
-]
-```
-
-If there are no items matching criteria, the API will return a error message:<br>
-
-```
-No items that match search criteria.
+Sent from your Twilio trial account - Todo item inserted successfully!
 ```
