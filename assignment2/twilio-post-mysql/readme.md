@@ -1,7 +1,7 @@
 # WMDD4935 - Assignment 2
 ## Texting to-do items to a database
 
-
+![High Level Architecture](./twilio.png)
 
 ### Endpoint: 
 `https://mysql-get-todo.marciaisejima.now.sh`
